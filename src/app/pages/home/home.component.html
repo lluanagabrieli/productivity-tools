@@ -1,0 +1,11 @@
+<main class="home">
+  <h1 class="home-title">Escolha uma das ferramentas abaixo</h1>
+
+  <div class="home-options">
+    @for(botao of botoes; track $index) {
+      <button class="home-button" [routerLink]="'/'+botao.rota">
+        {{ botao.nome }}
+      </button>
+    }
+  </div>
+</main>

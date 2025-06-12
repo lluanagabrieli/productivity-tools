@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { ListaTarefasComponent } from "./pages/lista-tarefas/lista-tarefas.component";
+import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [ListaTarefasComponent],
+  imports: [
+    RouterOutlet,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

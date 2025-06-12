@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Jost", sans-serif;
+  height: 100%;
+}
+
+.home-title {
+  font-size: 3rem;
+}
+
+.home-options {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.home-button {
+  padding: 6px 1rem;
+  background-color: #ac25ac;
+  border: 2px solid #ac25ac28;
+  border-radius: 15px;
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.home-button:hover {
+  background-color: #6b0c6b;
+}
