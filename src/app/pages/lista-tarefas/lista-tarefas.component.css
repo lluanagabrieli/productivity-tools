@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+.tarefa-concluida {
+  text-decoration: line-through;
+  font-style: italic;
+}
+
+.tela-lista-tarefas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: "Jost", sans-serif;
+}
+
+.template-listagem {
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+  align-items: center;
+  padding: 6px 2rem;
+  border: 1px solid #ebebeb1e;
+  border-radius: 10px;
+  box-shadow: black;
+  background-color: #ffdce9;
+  min-height: 40rem;
+  width: 35rem;
+  max-width: 35rem;
+  max-height: 30rem;
+  overflow-y: visible;
+  overflow-x: hidden;
+}
+
+.lista-titulo {
+  font-size: 3rem;
+}
+
+.adiciona-tarefa {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.input-adiciona-tarefa {
+  border: none;
+  padding: 8px;
+  width: 100%;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  background-color: white;
+}
+
+.botao-adiciona-tarefa {
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  background-color: #e787aa;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.botao-adiciona-tarefa:hover {
+  background-color: #dd3c77;
+}
+
+.tarefa-nome {
+  font-weight: normal;
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.tarefa {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 10px 0;
+  background-color: #e8a5be76;
+  border-radius: 2rem;
+  padding:6px 14px;
+}
+
+.tarefa-check-nome {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.checkbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid #e8a5be;
+  background-color: #ffffffb0;
+  border-radius: 1rem;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+
+.checkbox:checked {
+  background-color: #e787aa;
+}
+
+.botao-remover {
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: red;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+
+.sem-tarefas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem;
+  font-size: 1.5rem;
+  color: #d0004c84;
+}

@@ -1,0 +1,29 @@
+<main class="tela-lista-tarefas">
+  <section class="template-listagem">
+    <h1 class="lista-titulo">My To Do List</h1>
+
+    <div class="adiciona-tarefa">
+      <input class="input-adiciona-tarefa" [(ngModel)]="tarefa">
+      <button class="botao-adiciona-tarefa" (click)="adicionarTarefa()">Adicionar</button>
+    </div>
+
+    @if(listaTarefas.length > 0) {
+      @for(tarefa of listaTarefas; track $index) {
+        <div class="tarefa">
+          <div class="tarefa-check-nome">
+            <input type="checkbox" class="checkbox" (click)="concluirTarefa($index)">
+            <h2 class="tarefa-nome"
+              [ngClass]="{ 'tarefa-concluida' : tarefa.concluida }">{{ tarefa.nome }}</h2>
+          </div>
+
+          <button class="botao-remover" (click)="removerTarefa($index)">X</button>
+        </div>
+      }
+    }
+    @else {
+      <div class="sem-tarefas">
+        <span>Sem tarefas :(</span>
+      </div>
+    }
+  </section>
+</main>
