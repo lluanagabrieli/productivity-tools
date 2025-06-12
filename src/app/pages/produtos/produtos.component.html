@@ -1,1 +1,32 @@
-<p>produtos works!</p>
+<main class="produtos-main">
+  <h1 class="produtos-title">Lista de Produtos</h1>
+
+  <form (ngSubmit)="salvarProduto()">
+    <label for="form-nome">Nome</label><br>
+    <input type="text" id="form-nome" name="nome" [(ngModel)]="produto.nome"><br>
+
+    <label for="form-nome">Categoria</label><br>
+    <select name="categoria" id="form-categoria" [(ngModel)]="produto.categoria">
+      <option value="Vestuário" >Vestuário</option>
+      <option value="Eletrônicos">Eletrônicos</option>
+      <option value="Pessoal">Pessoal</option>
+    </select><br>
+
+    <label for="form-preco">Preço</label><br>
+    <input type="number" id="form-preco" name="preco" [(ngModel)]="produto.preco"><br>
+
+    <button type="submit">Salvar</button>
+  </form>
+
+  <section class="section-products">
+    @for(produto of listaProdutos; track $index) {
+      <section class="produto">
+        <h2>{{ produto.nome }}</h2>
+        <h3>{{ produto.categoria }}</h3>
+        <h4>{{ produto.preco }}</h4>
+
+        <hr class="section-line">
+      </section>
+    }
+  </section>
+</main>
